@@ -31,7 +31,7 @@ async  function fetchForMediaExpert() {
     const id = document.querySelector(
       ".id.is-regular[data-v-16fb7132]"
     ).innerText;
-    const price = document.querySelector(".").innerText;
+    const price = document.querySelector(".whole").innerText;
     const url = window.location.href;
     const rating =
       document
@@ -41,10 +41,10 @@ async  function fetchForMediaExpert() {
       ".spark-image img[data-v-43312c86]"
     ).src); //?
     return { name, id, price, url, rating, foto };
-    // getB64Image()
+  //
   }
  async function fetchForMediaMarkt() {
-    const name = document.querySelector(".title").innerText;
+    const name = document.querySelector(".info .title[data-v-0d4f25e9]").innerText;
     const id = document.querySelector(".catalog").innerText;
     const price = document.querySelector(".whole").innerText;
     const url = window.location.href;
@@ -54,8 +54,8 @@ async  function fetchForMediaExpert() {
         .style.width.slice(0, -1) / 100;
     const foto = await getB64Image(document.querySelector(".is-loaded").src); //?
     return { name, id, price, url, rating, foto };
-    getB64Image()
-  } //https://mediamarkt.pl/konsole-i-gry/playstation-5/konsole-ps5
+   
+  } //https://mediamarkt.pl/rtv-i-telewizory/sluchawki-przewodowe-douszne-apple-earpods-ze-zlaczem-lightning-mmtn2zm-a-bialy
  async function fetchForEuro() {
     // const img = await getB64Image()
     const name = document.querySelector("h1.product-name").innerText;
